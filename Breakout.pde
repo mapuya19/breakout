@@ -102,6 +102,15 @@ void draw() {
     block.collide();
   }
 
+  // Win dialogue; isn't always accurate for some reason?
+  if (score == blockCount) {
+    textFont(f,16);
+    fill(255, 255, 255);
+    textAlign(CENTER, BOTTOM);
+    text("You win! Press DOWN to restart or ESC to exit.", width / 2, height / 2);
+    noLoop();
+  }
+
   // End game or restart game
   if(ball.getY() >= height) {
     textFont(f,16);
