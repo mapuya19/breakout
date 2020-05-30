@@ -30,7 +30,7 @@ float ballRadius = 5;
 float ballSpeed = 6; // Set ball speed
 
 int score;
-float scoreX = 10;
+float scoreX = width / 2;
 float scoreY = 60;
 
 // Set window size
