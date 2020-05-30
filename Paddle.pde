@@ -11,6 +11,7 @@ class Paddle {
     rect(posX, paddleY, paddleWidth, paddleHeight);
   }
 
+  // Move paddle
   void update() {
     if (paddleLeft) {
       posX -= paddleSpeed;

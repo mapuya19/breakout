@@ -18,6 +18,7 @@ class Block {
     }
   }
 
+  // Check for collision
   void collide() {
     if(isHit) {
       return;
@@ -26,7 +27,7 @@ class Block {
     if(ball.getX() > posX - ballRadius &&
        ball.getX() < posX + blockWidth + ballRadius &&
        abs(ball.getY() - (posY - ballRadius)) < 3) {
-      
+      score++;
       isHit = true;
       ball.bounceUp();
     }
@@ -34,7 +35,7 @@ class Block {
     if(ball.getX() > posX - ballRadius &&
        ball.getX() < posX + blockWidth + ballRadius &&
        abs(ball.getY() - (posY + blockHeight + ballRadius)) < 3) {
-      
+      score++;
       isHit = true;
       ball.bounceDown();
     }
@@ -42,7 +43,7 @@ class Block {
     if(ball.getY() > posY - ballRadius &&
        ball.getY() < posY + blockHeight + ballRadius &&
        abs(ball.getX() - (posX - ballRadius)) < 3) {
-      
+      score++;
       isHit = true;
       ball.bounceLeft();
     }
@@ -50,7 +51,7 @@ class Block {
     if(ball.getY() > posY - ballRadius &&
        ball.getY() < posY + blockHeight + ballRadius &&
        abs(ball.getX() - (posX + blockWidth + ballRadius)) < 3) {
-      
+      score++;
       isHit = true;
       ball.bounceRight();
     }

@@ -19,6 +19,7 @@ class Ball {
     ellipse(posX, posY, ballRadius * 2, ballRadius * 2);
   }
 
+  // Ball bouncing
   void update() {
     posX += velocityX;
     posY += velocityY;
@@ -40,23 +41,19 @@ class Ball {
     }
   }
 
-  void bounceUp()
-  {
+  void bounceUp() {
     velocityY = -abs(velocityY);
   }
   
-  void bounceDown()
-  {
+  void bounceDown() {
     velocityY = abs(velocityY);
   }
 
-  void bounceLeft()
-  {
+  void bounceLeft() {
     velocityX = -abs(velocityX);
   }
   
-  void bounceRight()
-  {
+  void bounceRight() {
     velocityX = abs(velocityX);
   }
 
